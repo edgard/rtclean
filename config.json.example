@@ -1,0 +1,10 @@
+{
+    "expirehours": 360,
+    "rpcurl": "http://user:pass@127.0.0.1:8082/RPC2",
+    "fakebasedir": "/data/rtorrent/complete",
+    "realbasedir": "/srv/torrent/rtorrent/complete",
+    "checkdirs": [
+        "/srv/torrent/rtorrent/complete/tv",
+        "/srv/torrent/rtorrent/complete/movie"
+    ]
+}
