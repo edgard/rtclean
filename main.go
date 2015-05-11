@@ -65,7 +65,7 @@ func removeOrphans(client *xmlrpc.Client) {
 		err := client.Call("d.get_base_path", torrent, &torrentPath)
 		if err != nil {
 			fmt.Println(err)
-			return
+			os.Exit(1)
 		}
 		torrentPathlist = append(torrentPathlist, torrentPath)
 	}
@@ -75,7 +75,7 @@ func removeOrphans(client *xmlrpc.Client) {
 		dirPath, err := filepath.Glob(path.Join(dir, "*"))
 		if err != nil {
 			fmt.Println(err)
-			return
+			os.Exit(1)
 		}
 		dirPathlist = append(dirPathlist, dirPath...)
 	}
